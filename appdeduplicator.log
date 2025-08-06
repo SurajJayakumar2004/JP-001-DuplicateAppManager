@@ -1,0 +1,152 @@
+[2025-08-06 14:28:09] Application started
+[2025-08-06 14:29:00] Starting scan of directory: ./test-apps
+[2025-08-06 14:36:07] Application started
+[2025-08-06 14:36:10] Starting scan of directory: ./test-apps
+[2025-08-06 14:36:10] Found application file: chrome-installer-copy.exe
+[2025-08-06 14:36:10] Found application file: sample-game.exe
+[2025-08-06 14:36:10] Found application file: my-app.jar
+[2025-08-06 14:36:10] Found application file: firefox-setup.exe
+[2025-08-06 14:36:10] Found application file: vscode-installer.msi
+[2025-08-06 14:36:10] Found application file: my-app-backup.jar
+[2025-08-06 14:36:10] Found application file: chrome-installer.exe
+[2025-08-06 14:36:10] Scan completed. Found 7 application files
+[2025-08-06 14:36:17] Starting duplicate detection for 7 files
+[2025-08-06 14:36:17] Computed hash for chrome-installer-copy.exe: e3b0c44298fc1c14...
+[2025-08-06 14:36:17] Computed hash for sample-game.exe: e3b0c44298fc1c14...
+[2025-08-06 14:36:17] Computed hash for my-app.jar: e3b0c44298fc1c14...
+[2025-08-06 14:36:17] Computed hash for firefox-setup.exe: e3b0c44298fc1c14...
+[2025-08-06 14:36:17] Computed hash for vscode-installer.msi: e3b0c44298fc1c14...
+[2025-08-06 14:36:17] Computed hash for my-app-backup.jar: e3b0c44298fc1c14...
+[2025-08-06 14:36:17] Computed hash for chrome-installer.exe: e3b0c44298fc1c14...
+[2025-08-06 14:36:17] Found 1 duplicate groups
+[2025-08-06 14:36:17] Duplicate Group 1 (Hash: e3b0c44298fc1c14...):
+[2025-08-06 14:36:17]   - chrome-installer-copy.exe (0 B)
+[2025-08-06 14:36:17]   - sample-game.exe (0 B)
+[2025-08-06 14:36:17]   - my-app.jar (0 B)
+[2025-08-06 14:36:17]   - firefox-setup.exe (0 B)
+[2025-08-06 14:36:17]   - vscode-installer.msi (0 B)
+[2025-08-06 14:36:17]   - my-app-backup.jar (0 B)
+[2025-08-06 14:36:17]   - chrome-installer.exe (0 B)
+[2025-08-06 14:39:18] Application started
+[2025-08-06 14:39:31] Starting scan of directory: ./test-apps
+[2025-08-06 14:39:31] Found application file: chrome-installer-copy.exe
+[2025-08-06 14:39:31] Found application file: sample-game.exe
+[2025-08-06 14:39:31] Found application file: my-app.jar
+[2025-08-06 14:39:31] Found application file: firefox-setup.exe
+[2025-08-06 14:39:31] Found application file: vscode-installer.msi
+[2025-08-06 14:39:31] Found application file: mobile-game.apk
+[2025-08-06 14:39:31] Found application file: my-app-backup.jar
+[2025-08-06 14:39:31] Found application file: chrome-installer.exe
+[2025-08-06 14:39:31] Scan completed. Found 8 application files
+[2025-08-06 14:39:37] Starting duplicate detection for 8 files
+[2025-08-06 14:39:37] Computed hash for chrome-installer-copy.exe: 228d8b9c89654ebd...
+[2025-08-06 14:39:37] Computed hash for sample-game.exe: 20fb21346a3f66a1...
+[2025-08-06 14:39:37] Computed hash for my-app.jar: 018a4818c8b2a496...
+[2025-08-06 14:39:37] Computed hash for firefox-setup.exe: 84aa05adabbc1b3b...
+[2025-08-06 14:39:37] Computed hash for vscode-installer.msi: 10760812537f2c60...
+[2025-08-06 14:39:37] Computed hash for mobile-game.apk: f5ae82510af57d32...
+[2025-08-06 14:39:37] Computed hash for my-app-backup.jar: 018a4818c8b2a496...
+[2025-08-06 14:39:37] Computed hash for chrome-installer.exe: 228d8b9c89654ebd...
+[2025-08-06 14:39:37] Found 2 duplicate groups
+[2025-08-06 14:39:37] Duplicate Group 1 (Hash: 228d8b9c89654ebd...):
+[2025-08-06 14:39:37]   - chrome-installer-copy.exe (36 B)
+[2025-08-06 14:39:37]   - chrome-installer.exe (36 B)
+[2025-08-06 14:39:37] Duplicate Group 2 (Hash: 018a4818c8b2a496...):
+[2025-08-06 14:39:37]   - my-app.jar (30 B)
+[2025-08-06 14:39:37]   - my-app-backup.jar (30 B)
+[2025-08-06 14:41:38] Interactive deletion completed. Files deleted: 0
+[2025-08-06 14:41:50] Deleted file: /Users/manthan/Codes/AppDeduplicator/./test-apps/chrome-installer.exe
+[2025-08-06 14:41:50] Deleted file: /Users/manthan/Codes/AppDeduplicator/./test-apps/my-app-backup.jar
+[2025-08-06 14:41:50] Auto-deletion completed. Files deleted: 2
+[2025-08-06 14:44:16] Application started
+[2025-08-06 14:44:24] Starting scan of directory: ./test-apps
+[2025-08-06 14:44:24] Found application file: chrome-installer-copy.exe
+[2025-08-06 14:44:24] Found application file: sample-game.exe
+[2025-08-06 14:44:24] Found application file: my-app.jar
+[2025-08-06 14:44:24] Found application file: firefox-setup.exe
+[2025-08-06 14:44:24] Found application file: vscode-installer.msi
+[2025-08-06 14:44:24] Found application file: mobile-game.apk
+[2025-08-06 14:44:24] Scan completed. Found 6 application files
+[2025-08-06 14:44:33] Starting categorization of 6 files
+[2025-08-06 14:44:33] Categorized chrome-installer-copy.exe as Browser
+[2025-08-06 14:44:33] Categorized sample-game.exe as Games
+[2025-08-06 14:44:33] Categorized my-app.jar as Uncategorized
+[2025-08-06 14:44:33] Categorized firefox-setup.exe as Browser
+[2025-08-06 14:44:33] Categorized vscode-installer.msi as IDE
+[2025-08-06 14:44:33] Categorized mobile-game.apk as Games
+[2025-08-06 14:44:33] Categorization completed
+[2025-08-06 14:49:56] Application started
+[2025-08-06 14:49:58] Starting scan of directory: ./test-apps
+[2025-08-06 14:49:58] Found application file: chrome-installer-copy.exe
+[2025-08-06 14:49:58] Found application file: sample-game.exe
+[2025-08-06 14:49:58] Found application file: game-copy.exe
+[2025-08-06 14:49:58] Found application file: my-app.jar
+[2025-08-06 14:49:58] Found application file: firefox-setup-backup.exe
+[2025-08-06 14:49:58] Found application file: firefox-setup.exe
+[2025-08-06 14:49:58] Found application file: vscode-installer.msi
+[2025-08-06 14:49:58] Found application file: chrome-installer-backup.exe
+[2025-08-06 14:49:58] Found application file: test1.exe
+[2025-08-06 14:49:58] Found application file: mobile-game.apk
+[2025-08-06 14:49:58] Found application file: test2.exe
+[2025-08-06 14:49:58] Found application file: my-app-v2.jar
+[2025-08-06 14:49:58] Found application file: test3.exe
+[2025-08-06 14:49:58] Found application file: chrome-installer.exe
+[2025-08-06 14:49:58] Scan completed. Found 14 application files
+[2025-08-06 14:50:31] Starting duplicate detection for 14 files
+[2025-08-06 14:50:31] Computed hash for chrome-installer-copy.exe: 228d8b9c89654ebd...
+[2025-08-06 14:50:31] Computed hash for sample-game.exe: f62c163d177b81f1...
+[2025-08-06 14:50:31] Computed hash for game-copy.exe: f62c163d177b81f1...
+[2025-08-06 14:50:31] Computed hash for my-app.jar: 76f3af7f3ecf0fbf...
+[2025-08-06 14:50:31] Computed hash for firefox-setup-backup.exe: 9d19ffbbab11b228...
+[2025-08-06 14:50:31] Computed hash for firefox-setup.exe: 9d19ffbbab11b228...
+[2025-08-06 14:50:31] Computed hash for vscode-installer.msi: d408153ddfb5838d...
+[2025-08-06 14:50:31] Computed hash for chrome-installer-backup.exe: 228d8b9c89654ebd...
+[2025-08-06 14:50:31] Computed hash for test1.exe: 026d38d8c9d39fe0...
+[2025-08-06 14:50:31] Computed hash for mobile-game.apk: d8c80d44071372f3...
+[2025-08-06 14:50:31] Computed hash for test2.exe: 026d38d8c9d39fe0...
+[2025-08-06 14:50:31] Computed hash for my-app-v2.jar: 76f3af7f3ecf0fbf...
+[2025-08-06 14:50:31] Computed hash for test3.exe: 026d38d8c9d39fe0...
+[2025-08-06 14:50:31] Computed hash for chrome-installer.exe: 228d8b9c89654ebd...
+[2025-08-06 14:50:31] Found 5 duplicate groups
+[2025-08-06 14:50:31] Duplicate Group 1 (Hash: 9d19ffbbab11b228...):
+[2025-08-06 14:50:31]   - firefox-setup-backup.exe (34 B)
+[2025-08-06 14:50:31]   - firefox-setup.exe (34 B)
+[2025-08-06 14:50:31] Duplicate Group 2 (Hash: 228d8b9c89654ebd...):
+[2025-08-06 14:50:31]   - chrome-installer-copy.exe (36 B)
+[2025-08-06 14:50:31]   - chrome-installer-backup.exe (36 B)
+[2025-08-06 14:50:31]   - chrome-installer.exe (36 B)
+[2025-08-06 14:50:31] Duplicate Group 3 (Hash: f62c163d177b81f1...):
+[2025-08-06 14:50:31]   - sample-game.exe (23 B)
+[2025-08-06 14:50:31]   - game-copy.exe (23 B)
+[2025-08-06 14:50:31] Duplicate Group 4 (Hash: 026d38d8c9d39fe0...):
+[2025-08-06 14:50:31]   - test1.exe (23 B)
+[2025-08-06 14:50:31]   - test2.exe (23 B)
+[2025-08-06 14:50:31]   - test3.exe (23 B)
+[2025-08-06 14:50:31] Duplicate Group 5 (Hash: 76f3af7f3ecf0fbf...):
+[2025-08-06 14:50:31]   - my-app.jar (25 B)
+[2025-08-06 14:50:31]   - my-app-v2.jar (25 B)
+[2025-08-06 14:50:57] Deleted file: /Users/manthan/Codes/AppDeduplicator/./test-apps/firefox-setup.exe
+[2025-08-06 14:50:57] Deleted file: /Users/manthan/Codes/AppDeduplicator/./test-apps/game-copy.exe
+[2025-08-06 14:50:57] Deleted file: /Users/manthan/Codes/AppDeduplicator/./test-apps/test2.exe
+[2025-08-06 14:50:57] Deleted file: /Users/manthan/Codes/AppDeduplicator/./test-apps/test3.exe
+[2025-08-06 14:50:57] Deleted file: /Users/manthan/Codes/AppDeduplicator/./test-apps/my-app-v2.jar
+[2025-08-06 14:50:57] Deleted file: /Users/manthan/Codes/AppDeduplicator/./test-apps/chrome-installer-backup.exe
+[2025-08-06 14:50:57] Deleted file: /Users/manthan/Codes/AppDeduplicator/./test-apps/chrome-installer.exe
+[2025-08-06 14:50:57] Auto-deletion completed. Files deleted: 7
+[2025-08-06 14:51:08] Starting categorization of 14 files
+[2025-08-06 14:51:08] Categorized chrome-installer-copy.exe as Browser
+[2025-08-06 14:51:08] Categorized sample-game.exe as Games
+[2025-08-06 14:51:08] Categorized game-copy.exe as Games
+[2025-08-06 14:51:08] Categorized my-app.jar as Uncategorized
+[2025-08-06 14:51:08] Categorized firefox-setup-backup.exe as Browser
+[2025-08-06 14:51:08] Categorized firefox-setup.exe as Browser
+[2025-08-06 14:51:08] Categorized vscode-installer.msi as IDE
+[2025-08-06 14:51:08] Categorized chrome-installer-backup.exe as Browser
+[2025-08-06 14:51:08] Categorized test1.exe as Uncategorized
+[2025-08-06 14:51:08] Categorized mobile-game.apk as Games
+[2025-08-06 14:51:08] Categorized test2.exe as Uncategorized
+[2025-08-06 14:51:08] Categorized my-app-v2.jar as Uncategorized
+[2025-08-06 14:51:08] Categorized test3.exe as Uncategorized
+[2025-08-06 14:51:08] Categorized chrome-installer.exe as Browser
+[2025-08-06 14:51:08] Categorization completed
+[2025-08-06 14:59:40] Application started

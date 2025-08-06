@@ -1,7 +1,0 @@
-{
-  "scan_paths": [
-    "/Users/surajj/Applications",
-    "/Users/surajj/Downloads"
-  ],
-  "rules_path": "src/main/resources/rules/categorization.drl"
-}
