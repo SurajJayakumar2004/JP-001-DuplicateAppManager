@@ -1,8 +1,9 @@
+// ✅ Categorizer.java (robust file moving + folder creation)
 package com.jp001.categorizer;
 
 import com.jp001.model.ApplicationFile;
 import com.jp001.utils.LoggerUtil;
-import org.kie.api.io.Resource;
+import org.kie.api.io.ResourceType;
 import org.kie.api.runtime.KieSession;
 import org.kie.internal.utils.KieHelper;
 
@@ -13,23 +14,14 @@ import java.util.List;
 
 public class Categorizer {
 
-    /**
-     * Applies Drools rules to categorize application files and moves them into folders.
-     *
-     * @param files      List of ApplicationFile objects
-     * @param rulesPath  Path to the .drl rules file
-     */
     public static void applyCategorization(List<ApplicationFile> files, String rulesPath) {
         try {
-            // Load Drools rules from .drl file
             String drl = Files.readString(Path.of(rulesPath));
 
             KieHelper kieHelper = new KieHelper();
-            kieHelper.addContent(drl, Resource.ResourceType.DRL);
-
+            kieHelper.addContent(drl, ResourceType.DRL);
             KieSession kieSession = kieHelper.build().newKieSession();
 
-            // Insert facts and fire rules
             for (ApplicationFile file : files) {
                 kieSession.insert(file);
             }
@@ -37,11 +29,17 @@ public class Categorizer {
             kieSession.fireAllRules();
             kieSession.dispose();
 
-            // Move files to categorized folders
+            Files.createDirectories(Path.of("categorized"));
+
             for (ApplicationFile file : files) {
                 String category = file.getCategory();
                 if (category != null && !category.equalsIgnoreCase("Uncategorized")) {
                     Path sourcePath = Path.of(file.getPath());
+                    if (!Files.exists(sourcePath)) {
+                        LoggerUtil.logWarning("File already moved or missing: " + sourcePath);
+                        continue;
+                    }
+
                     Path targetDir = Path.of("categorized", category);
                     Files.createDirectories(targetDir);
 

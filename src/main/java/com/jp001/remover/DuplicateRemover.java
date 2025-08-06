@@ -1,57 +1,49 @@
+// ✅ DuplicateRemover.java (optional refresh after deletion)
 package com.jp001.remover;
 
 import com.jp001.model.ApplicationFile;
 import com.jp001.utils.LoggerUtil;
 
-import java.io.File;
 import java.nio.file.Files;
-import java.util.List;
-import java.util.Map;
-import java.util.Scanner;
+import java.nio.file.Path;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class DuplicateRemover {
 
-    /**
-     * Interactively prompts the user to choose which duplicates to remove.
-     *
-     * @param duplicates Map of hash -> list of duplicate ApplicationFile objects
-     */
-    public static void handleUserRemoval(Map<String, List<ApplicationFile>> duplicates) {
+    public static void promptAndRemove(Map<String, List<ApplicationFile>> duplicates) {
         Scanner scanner = new Scanner(System.in);
 
         for (Map.Entry<String, List<ApplicationFile>> entry : duplicates.entrySet()) {
-            List<ApplicationFile> files = entry.getValue();
-
-            System.out.println("\n🔁 Duplicate Group (Hash: " + entry.getKey() + ")");
-            for (int i = 0; i < files.size(); i++) {
-                System.out.println("  [" + i + "] " + files.get(i).getPath());
+            List<ApplicationFile> dupList = entry.getValue();
+            System.out.println("\nDuplicate group (" + entry.getKey() + "):");
+            for (int i = 0; i < dupList.size(); i++) {
+                ApplicationFile file = dupList.get(i);
+                System.out.printf("[%d] %s (%d bytes)%n", i + 1, file.getPath(), file.getSize());
             }
 
-            System.out.print("Enter indices of files to delete (comma-separated, or press Enter to skip): ");
+            System.out.print("Enter file numbers to delete (comma-separated), or press Enter to skip: ");
             String input = scanner.nextLine().trim();
 
             if (!input.isEmpty()) {
-                String[] indices = input.split(",");
-                for (String indexStr : indices) {
+                String[] tokens = input.split(",");
+                for (String token : tokens) {
                     try {
-                        int idx = Integer.parseInt(indexStr.trim());
-                        if (idx >= 0 && idx < files.size()) {
-                            File file = new File(files.get(idx).getPath());
-                            if (Files.deleteIfExists(file.toPath())) {
-                                LoggerUtil.logInfo("🗑 Deleted: " + file.getAbsolutePath());
+                        int index = Integer.parseInt(token.trim()) - 1;
+                        if (index >= 0 && index < dupList.size()) {
+                            Path path = Path.of(dupList.get(index).getPath());
+                            if (Files.exists(path)) {
+                                Files.delete(path);
+                                LoggerUtil.logInfo("Deleted: " + path);
                             } else {
-                                LoggerUtil.logWarning("⚠️ Could not delete: " + file.getAbsolutePath());
+                                LoggerUtil.logWarning("File already deleted or missing: " + path);
                             }
                         }
                     } catch (Exception e) {
-                        LoggerUtil.logError("Invalid index or deletion error: " + indexStr + " | " + e.getMessage());
+                        LoggerUtil.logError("Invalid input or error deleting file: " + e.getMessage());
                     }
                 }
-            } else {
-                LoggerUtil.logInfo("Skipped deletion for this group.");
             }
         }
-
-        scanner.close();
     }
 }
